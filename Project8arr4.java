@@ -9,8 +9,8 @@ public class Project8arr4 {
 	static boolean is_It_in_the_array_9(int c, int[] a) {
 		boolean is_It_in_the_array = false;
 		for (int r = 0;r<9;r++) {
-			if (a[r] != c) {
-				is_It_in_the_array = true;
+			if (a[r] == c) {
+				is_It_in_the_array = true; break;
 			}
 		}
 		return is_It_in_the_array;
@@ -21,8 +21,8 @@ public class Project8arr4 {
 			return false;
 		}
 		for (int v = 0;v < 9;v++) {
-			if (is_It_in_the_array_9(v,a) != true) {
-				is_It_valid = false;
+			if (!is_It_in_the_array_9(v,a)) {
+				is_It_valid = false; break;
 			}
 		}
 		return is_It_valid;
@@ -55,7 +55,7 @@ public class Project8arr4 {
 		for (int j = 0;j<9;j++) {
 			for(int q = 0;q<9;q++) {
 				a[q] = sudoku[j][q];
-				if (valid(a) != true) {
+				if (!valid(a)) {
 					is_It_Sudoku = false; break;
 				}
 			}
