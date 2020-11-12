@@ -11,11 +11,12 @@ public class Project11 {
 			System.out.println("Name?: ");
 			name = sc.nextLine();
 			System.out.println("Grade?: ");
-			grade = sc.nextDouble();
-			sc.nextLine();
+			grade = Double.parseDouble(sc.nextLine());
+			//sc.nextLine();
 			students[i] = new Student (name,grade);
 		}
 		sc.close();
+		display_Students_That_Deserve_Money(students);
 	}
 	static boolean does_He_Deserve_Money(Student student) {
 		return student.grade > 5.50;
