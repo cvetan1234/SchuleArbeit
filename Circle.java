@@ -18,5 +18,8 @@ class Circle {
 	void setRadius(double newRadius) {
 		radius = newRadius;
 	}
+	double getRadius(double a) {
+		return a = radius;
+	}
 }
 

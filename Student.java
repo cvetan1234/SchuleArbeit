@@ -3,13 +3,20 @@ package smg;
 class Student {
 	public String name;
 	public double grade;
-	
-	public Student() {
-		
+	public Student(String newName, double newGrade) {
+		name = newName;
+		grade = newGrade;
 	}
-	
-	public Student( String name, double grade) {
-		this.name = name;
-		this.grade = grade;
+	void setName(String newName) {
+		this.name = newName;
+	}
+	String getName() {
+		return this.name;
+	}
+	void setGrade(double newGrade) {
+		this.grade = newGrade;
+	}
+	double getGrade () {
+		return this.grade;
 	}
 }
